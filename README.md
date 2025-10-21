@@ -4,22 +4,23 @@ A simple logger written in Kotlin, by me, for me. (ies***tyn***129)
 ## Plan
 TynLog is intended to be specialised logger for my specific use cases,
 with plans to include the following features:
-- A single `TynLog` object responsible for all logging and configuration. It will have to be initialised
+- ✅ A single `TynLog` object responsible for all logging and configuration. It will have to be initialised
 before any logging takes place.
-- 4 log levels, info (`INF`), warning (`WRN`), error (`ERR`), and debug (`DBG`).
+- ✅ 4 log levels, info (`INF`), warning (`WRN`), error (`ERR`), and debug (`DBG`).
 The debug level will be toggleable, ignoring any debug messages when disabled.
-- The date and time present in every log message, in a `yyyy-MM-dd HH:mm:ss.SSS` format,
+- ✅ The date and time present in every log message, in a `yyyy-MM-dd HH:mm:ss.SSS` format,
 timezone will default to the devices. Both will be customisable.
-- Options to log to the console and or a file. Not using either would effectively disable logging.
+- ✅ Options to log to the console and or a file. Not using either would effectively disable logging.
 Log files will use the `.log` file extension since there's no standard associated with it.
-- When logging to a file, a log folder will be set, 
+An error stream will also be specifiable for `ERR`s.
+- ✅ When logging to a file, a log folder will be set, 
 and log file names will be the date and time the program started. This format will also be customisable,
 but will default to `yyyy-MMM-dd HH:mm:ss`. Log files will not overwrite existing files, but will append
 `-n` where `n` increases until not necessary.
-- Auto deletion of log files can be setup, based on the time passed since the file was last modified.
+- ✅ Auto deletion of log files can be setup, based on the time passed since the file was last modified.
 File creation times won't work, programs could easily run longer than the auto deletion time.
 I think 7 days would be a reasonable default.
-- Maybe stacktrace options for showing the class where its being called from, or even file and line.
+- ⏸️ Maybe stacktrace options for showing the class where its being called from, or even file and line.
 
 Example log output could look something like this:
 ```log
