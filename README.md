@@ -36,6 +36,11 @@ Example log output could look something like this:
 [2025-10-21 07:00:03.262] [INF] [src/dev/iestyn129/example/StuffClass.kt:47:13] Maybe this one is a little extra.
 ```
 
+## Building
+TynLog is written in Kotlin 2.2 on Java 8, and uses the IntelliJ IDEA build system.
+This is what's most convenient for me, so don't complain about it.
+Just be thankful there's no other dependencies.
+
 ## Issues and Contribution
 If you want to create issues or pull requests be my guest, but expect nothing from them. Yet again,
 this is only for me.
