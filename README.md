@@ -39,3 +39,7 @@ Example log output could look something like this:
 ## Issues and Contribution
 If you want to create issues or pull requests be my guest, but expect nothing from them. Yet again,
 this is only for me.
+
+## Licence
+This project is licenced under the GNU General Public Licence version 3 (GPLv3).
+See the [LICENCE](./LICENCE) file for more details.
