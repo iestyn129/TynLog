@@ -41,5 +41,5 @@ If you want to create issues or pull requests be my guest, but expect nothing fr
 this is only for me.
 
 ## Licence
-This project is licenced under the GNU General Public Licence version 3 or later (GPLv3).
+This project is licenced under the GNU General Public Licence version 3 or later (GPLv3+).
 See the [LICENCE](./LICENCE) file for more details.
