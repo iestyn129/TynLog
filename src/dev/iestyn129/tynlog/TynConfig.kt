@@ -7,7 +7,7 @@ import java.text.SimpleDateFormat
 import java.time.format.DateTimeFormatter
 import java.util.Date
 
-private const val FILE_EXTENSION: String = ".log"
+private const val FILE_EXTENSION: String = "log"
 
 data class TynConfig(
 	val debug: Boolean = false,
@@ -39,27 +39,26 @@ data class LogFolderConfig(
 			if (!folder.exists())
 				folder.mkdirs()
 
-			if (autoDeleteTime != null) folder.listFiles { it.isFile && it.extension == "log" }?.forEach {
+			if (autoDeleteTime != null) folder.listFiles { it.isFile && it.extension == FILE_EXTENSION }?.forEach {
 				if (System.currentTimeMillis() >= it.lastModified() + autoDeleteTime)
-					if (!it.delete()) throw IOException("Failed to delete old log files")
+					if (!it.delete()) throw IOException("Failed to delete old file: ${it.name}")
 			}
 
 			if (!::logFile.isInitialized) {
 				val fileName: String = "${timeFormat.format(Date())}"
-				logFile = File(folder, "$fileName$FILE_EXTENSION")
+				logFile = File(folder, "$fileName.$FILE_EXTENSION")
 
 				var i: Int = 1
 				while (logFile.exists()) {
-					logFile = File(folder, "$fileName-$i$FILE_EXTENSION")
+					logFile = File(folder, "$fileName-$i.$FILE_EXTENSION")
 					i++
 				}
+
+				logFile.createNewFile()
 			}
 
 			initialised = true
 		}
-
-		if (!logFile.exists())
-			logFile.createNewFile()
 
 		logFile.appendText(message)
 	}

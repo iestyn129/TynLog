@@ -1,5 +1,6 @@
 package dev.iestyn129.tynlog
 
+import java.io.PrintStream
 import java.time.LocalDateTime
 
 object TynLog {
@@ -32,8 +33,9 @@ object TynLog {
 
 		val text: String = "[${LocalDateTime.now().format(config.timeFormat)}] [$logLevel] $message\n"
 
-		if (logLevel == LogLevel.ERR && config.errorStream != null)
-			config.errorStream!!.print(text)
+		val errorStream: PrintStream? = config.errorStream
+		if (logLevel == LogLevel.ERR && errorStream != null)
+			errorStream.print(text)
 		else config.printStream?.print(text)
 
 		config.logFolder?.log(text)
