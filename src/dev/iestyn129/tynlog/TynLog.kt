@@ -19,15 +19,15 @@ object TynLog {
 		initialised = true
 	}
 
-	fun info(message: Any) = log(LogLevel.INF, message)
+	fun info(message: Any?) = log(LogLevel.INF, message)
 
-	fun warn(message: Any) = log(LogLevel.WRN, message)
+	fun warn(message: Any?) = log(LogLevel.WRN, message)
 
-	fun error(message: Any) = log(LogLevel.ERR, message)
+	fun error(message: Any?) = log(LogLevel.ERR, message)
 
-	fun debug(message: Any) = log(LogLevel.DBG, message)
+	fun debug(message: Any? = "") = log(LogLevel.DBG, message)
 
-	private fun log(logLevel: LogLevel, message: Any) {
+	private fun log(logLevel: LogLevel, message: Any?) {
 		if (!initialised || (logLevel == LogLevel.DBG && !config.debug))
 			return
 
