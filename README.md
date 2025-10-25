@@ -37,13 +37,12 @@ Example log output could look something like this:
 ```
 
 ## Building
-TynLog is written in Kotlin 2.2 on Java 8, and uses the IntelliJ IDEA build system.
-This is what's most convenient for me, so don't complain about it.
-Just be thankful there's no other dependencies.
+TynLog is written in Kotlin 2.2.20 on Java 8, and Gradle 8.14.
+It's my first time using Gradle, so don't expect perfection.
 
 ## Issues and Contribution
-If you want to create issues or pull requests be my guest, but expect nothing from them. Yet again,
-this is only for me.
+If you want to create issues or pull requests, be my guest but expect nothing from them.
+Yet again, this is only for me.
 
 ## Licence
 This project is licenced under the GNU General Public Licence version 3 or later (GPLv3+).

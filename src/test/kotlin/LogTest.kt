@@ -7,7 +7,7 @@ fun main() {
 		debug = true,
 		//errorStream = System.err,
 		logFolder = LogFolderConfig(
-			folder = File("test/log"),
+			folder = File("src/test/log"),
 			//timeFormat = SimpleDateFormat("yyyy-MMM-dd"),
 			autoDeleteTime = 60L * 1000L
 		)

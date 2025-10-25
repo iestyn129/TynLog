@@ -19,7 +19,7 @@ data class TynConfig(
 
 data class LogFolderConfig(
 	val folder: File,
-	val timeFormat: SimpleDateFormat = SimpleDateFormat("yyyy-MMM-dd HH:mm:ss"),
+	val timeFormat: SimpleDateFormat = SimpleDateFormat("yyyy-MMM-dd HH.mm.ss"),
 	val autoDeleteTime: Long? = null,
 ) {
 	private var initialised: Boolean = false
