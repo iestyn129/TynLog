@@ -11,6 +11,11 @@ repositories {
 
 dependencies {}
 
+tasks.jar {
+	archiveBaseName = project.name
+	archiveVersion = "v${project.version}"
+}
+
 kotlin {
 	jvmToolchain(8)
 }
