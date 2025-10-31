@@ -1,6 +1,10 @@
 # TynLog
 A simple logger written in Kotlin, by me, for me. (ies***tyn***129)
 
+<a href="https://brainmade.org">
+	<img src="https://brainmade.org/white-logo.svg" alt="Brainmade Logo" width="160"/>
+</a>
+
 ## Plan
 TynLog is intended to be specialised logger for my specific use cases,
 with plans to include the following features:
